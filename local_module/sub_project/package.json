@@ -1,0 +1,28 @@
+{
+  "name": "npm_prepbulish_migration_test_sub",
+  "version": "1.0.0",
+  "description": "https://docs.npmjs.com/misc/scripts#prepublish-and-prepare",
+  "main": "index.js",
+  "scripts": {
+    "prepublis": "echo sub project prepublis",
+    "prepublishOnly": "echo sub project prepublishOnly",
+    "publis": "echo sub project publis",
+    "postpublis": "echo sub project postpublis",
+    "preinstall": "echo sub project preinstall",
+    "install": "echo sub project install",
+    "postinstall": "echo sub project postinstall",
+    "prepare": "echo sub project prepare",
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndxbn/npm_prepbulish_migration_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndxbn/npm_prepbulish_migration_test/issues"
+  },
+  "homepage": "https://github.com/ndxbn/npm_prepbulish_migration_test#readme"
+}
