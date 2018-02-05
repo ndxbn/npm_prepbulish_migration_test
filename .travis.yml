@@ -12,8 +12,8 @@ node_js:
 env:
   - THE_SCRIPT=install
   - THE_SCRIPT="install ./local_module/sub_project"
-  - THE_SCRIPT=pack
   - THE_SCRIPT=publish
+  - THE_SCRIPT=pack
 
 script: 
   - npm ${THE_SCRIPT}
