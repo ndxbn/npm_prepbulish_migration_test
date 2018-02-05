@@ -11,6 +11,9 @@
     "preinstall": "echo sub project preinstall",
     "install": "echo sub project install",
     "postinstall": "echo sub project postinstall",
+    "prepack": "echo sub project prepack",
+    "pack": "echo sub project pack",
+    "postpack": "echo sub project postpack",
     "prepare": "echo sub project prepare",
     "test": "node index.js"
   },
