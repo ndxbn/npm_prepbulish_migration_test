@@ -4,10 +4,10 @@
   "description": "https://docs.npmjs.com/misc/scripts#prepublish-and-prepare",
   "main": "index.js",
   "scripts": {
-    "prepublis": "echo sub project prepublis",
+    "prepublish": "echo sub project prepublish",
     "prepublishOnly": "echo sub project prepublishOnly",
-    "publis": "echo sub project publis",
-    "postpublis": "echo sub project postpublis",
+    "publish": "echo sub project publish",
+    "postpublish": "echo sub project postpublish",
     "preinstall": "echo sub project preinstall",
     "install": "echo sub project install",
     "postinstall": "echo sub project postinstall",
