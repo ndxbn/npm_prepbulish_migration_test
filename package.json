@@ -25,6 +25,7 @@
     "url": "https://github.com/ndxbn/npm_prepbulish_migration_test/issues"
   },
   "homepage": "https://github.com/ndxbn/npm_prepbulish_migration_test#readme",
+  "private": true,
   "dependencies": {
     "npm_prepbulish_migration_test_sub": "file:local_module/sub_project"
   }
