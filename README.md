@@ -13,8 +13,8 @@ npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main |  8  |  8  |  8  |  8  |  9  |  7  | No  | No  
 prepublishOnly main | No  | No  | No  | No  | No  | No  | No  | No  
-publis         main | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     main | No  | No  | No  | No  | No  | No  | No  | No  
+publish        main | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    main | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     main |  1  |  1  |  5  |  2  |  3  |  1  |  1  |  1  
 install        main |  6  |  6  |  6  |  6  |  7  |  5  |  5  |  5  
 postinstall    main |  7  |  7  |  7  |  7  |  8  |  6  |  6  |  6  
@@ -26,8 +26,8 @@ prepare        main | No  | No  | No  | No  | 10  |  8  |  7  |  7
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  |  2  |  2  |  1  |  1  |  1  | No  | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No  | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No  | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     sub  |  3  |  3  |  2  |  3  |  4  |  2  |  2  |  2  
 install        sub  |  4  |  4  |  3  |  4  |  5  |  3  |  3  |  3  
 postinstall    sub  |  5  |  5  |  4  |  5  |  6  |  4  |  4  |  4  
@@ -42,8 +42,8 @@ npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main | No  | No  | No  | No  | No  | No  | No  | No  
 prepublishOnly main | No  | No  | No  | No  | No  | No  | No  | No  
-publis         main | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     main | No  | No  | No  | No  | No  | No  | No  | No  
+publish        main | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    main | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     main | No  | No  | No  | No  | No  | No  | No  | No  
 install        main | No  | No  | No  | No  | No  | No  | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No  | No  | No  
@@ -55,8 +55,8 @@ prepare        main | No  | No  | No  | No  | No  | No  | No  | No
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  |  1  |  1  |  1  |  1  |  1  | No  | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No  | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No  | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     sub  |  2  |  2  |  2  |  2  |  3  |  1  |  1  |  1  
 install        sub  |  3  |  3  |  3  |  3  |  4  |  2  |  2  |  2  
 postinstall    sub  |  4  |  4  |  4  |  4  |  5  |  3  |  3  |  3  
@@ -107,8 +107,8 @@ npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main |  1  |  1  |  1  |  1  |  1  |  1 | No  | No  
 prepublishOnly main | No  | No  | No  | No  | No! | No!| No  | No  
-publis         main | No  | No  | No  | No  | No  | No | No  | No  
-postpublis     main | No  | No  | No  | No  | No  | No | No  | No  
+publish        main | No  | No  | No  | No  | No  | No | No  | No  
+postpublish    main | No  | No  | No  | No  | No  | No | No  | No  
 preinstall     main | No  | No  | No  | No  | No  | No | No  | No  
 install        main | No  | No  | No  | No  | No  | No | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No | No  | No  
@@ -120,8 +120,8 @@ prepare        main | No  | No  | No  | No  |  2  |  2 |  1  |  1
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  | No  | No  | No  | No  | No  | No | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No | No  | No  
 preinstall     sub  | No  | No  | No  | No  | No  | No | No  | No  
 install        sub  | No  | No  | No  | No  | No  | No | No  | No  
 postinstall    sub  | No  | No  | No  | No  | No  | No | No  | No  
@@ -208,8 +208,8 @@ npm script stage ＼ command | install | install foo | publish | pack
 :-- | --- | --- | --- | ---
 prepublish     main |  8  | No  |  1  |  1 
 prepublishOnly main | No  | No  | No  | No 
-publis         main | No  | No  | ??? | No 
-postpublis     main | No  | No  | ??? | No 
+publish        main | No  | No  | ??? | No 
+postpublish    main | No  | No  | ??? | No 
 preinstall     main |  2  | No  | No  | No 
 install        main |  6  | No  | No  | No 
 postinstall    main |  7  | No  | No  | No 
@@ -221,8 +221,8 @@ prepare        main | No  | No  |  No | No
 ===                 | ==  | ==  | ==  | == 
 prepublish     sub  |  1  |  1  | No  | No 
 prepublishOnly sub  | No  | No  | No  | No 
-publis         sub  | No  | No  | No  | No 
-postpublis     sub  | No  | No  | No  | No 
+publish        sub  | No  | No  | No  | No 
+postpublish    sub  | No  | No  | No  | No 
 preinstall     sub  |  3  |  2  | No  | No 
 install        sub  |  4  |  3  | No  | No 
 postinstall    sub  |  5  |  4  | No  | No 
@@ -238,8 +238,8 @@ npm script stage ＼ command | install | install foo | publish | pack
 :-- | --- | --- | --- | ---
 prepublish     main |  8  | No  |  1  |  1 
 prepublishOnly main | No  | No  | No  | No 
-publis         main | No  | No  | ??? | No 
-postpublis     main | No  | No  | ??? | No 
+publish        main | No  | No  | ??? | No 
+postpublish    main | No  | No  | ??? | No 
 preinstall     main |  5  | No  | No  | No 
 install        main |  6  | No  | No  | No 
 postinstall    main |  7  | No  | No  | No 
@@ -251,8 +251,8 @@ prepare        main | No  | No  | No  | No
 ===                 | ==  | ==  | ==  | == 
 prepublish     sub  |  1  |  1  | No  | No 
 prepublishOnly sub  | No  | No  | No  | No 
-publis         sub  | No  | No  | No  | No 
-postpublis     sub  | No  | No  | No  | No 
+publish        sub  | No  | No  | No  | No 
+postpublish    sub  | No  | No  | No  | No 
 preinstall     sub  |  2  |  2  | No  | No 
 install        sub  |  3  |  3  | No  | No 
 postinstall    sub  |  4  |  4  | No  | No 
@@ -268,8 +268,8 @@ npm script stage ＼ command | install | install foo | publish | pack
 :-- | --- | --- | --- | --- 
 prepublish     main |  8  | No  |  1  |  1 
 prepublishOnly main | No  | No  | No  | No 
-publis         main | No  | No  | ??? | No 
-postpublis     main | No  | No  | ??? | No 
+publish        main | No  | No  | ??? | No 
+postpublish    main | No  | No  | ??? | No 
 preinstall     main |  1  | No  | No  | No 
 install        main |  6  | No  | No  | No 
 postinstall    main |  7  | No  | No  | No 
@@ -281,8 +281,8 @@ prepare        main | No  | No  | No  | No
 ===                 | ==  | ==  | ==  | == 
 prepublish     sub  |  2  |  1  | No  | No 
 prepublishOnly sub  | No  | No  | No  | No 
-publis         sub  | No  | No  | No  | No 
-postpublis     sub  | No  | No  | No  | No 
+publish        sub  | No  | No  | No  | No 
+postpublish    sub  | No  | No  | No  | No 
 preinstall     sub  |  3  |  2  | No  | No 
 install        sub  |  4  |  3  | No  | No 
 postinstall    sub  |  5  |  4  | No  | No 
@@ -298,8 +298,8 @@ npm script stage ＼ command | install | install foo | publish | pack
 :-- | --- | --- | --- | --- 
 prepublish     main |  8  | No  |  1  |  1 
 prepublishOnly main | No  | No  | No  | No 
-publis         main | No  | No  | ??? | No 
-postpublis     main | No  | No  | ??? | No 
+publish        main | No  | No  | ??? | No 
+postpublish    main | No  | No  | ??? | No 
 preinstall     main |  1  | No  | No  | No 
 install        main |  6  | No  | No  | No 
 postinstall    main |  7  | No  | No  | No 
@@ -311,8 +311,8 @@ prepare        main | No  | No  | No  | No
 ===                 | ==  | ==  | ==  | == 
 prepublish     sub  |  2  |  1  | No  | No 
 prepublishOnly sub  | No  | No  | No  | No 
-publis         sub  | No  | No  | No  | No 
-postpublis     sub  | No  | No  | No  | No 
+publish        sub  | No  | No  | No  | No 
+postpublish    sub  | No  | No  | No  | No 
 preinstall     sub  |  3  |  2  | No  | No 
 install        sub  |  4  |  3  | No  | No 
 postinstall    sub  |  5  |  4  | No  | No 
@@ -330,8 +330,8 @@ npm script stage ＼ command | install | install foo | publish | pack
 :-- | --- | --- | --- | ---
 prepublish     main | No  | No  | No  | No 
 prepublishOnly main | No  | No  | No  | No 
-publis         main | No  | No  | ??? | No 
-postpublis     main | No  | No  | ??? | No 
+publish        main | No  | No  | ??? | No 
+postpublish    main | No  | No  | ??? | No 
 preinstall     main | No  | No  | No  | No 
 install        main | No  | No  | No  | No 
 postinstall    main | No  | No  | No  | No 
@@ -343,8 +343,8 @@ prepare        main | No  | No  | No  | No
 ===                 | ==  | ==  | ==  | == 
 prepublish     sub  | No  | No  | No  | No 
 prepublishOnly sub  | No  | No  | No  | No 
-publis         sub  | No  | No  | No  | No 
-postpublis     sub  | No  | No  | No  | No 
+publish        sub  | No  | No  | No  | No 
+postpublish    sub  | No  | No  | No  | No 
 preinstall     sub  | No  | No  | No  | No 
 install        sub  | No  | No  | No  | No 
 postinstall    sub  | No  | No  | No  | No 
