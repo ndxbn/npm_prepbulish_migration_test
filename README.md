@@ -71,15 +71,15 @@ npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main |  1  |  1  |  1  |  1  |  1  |  1  |  3  |  2  
 prepublishOnly main | No  | No  | No  | No  |  3  |  3  |  2  | No (deleted)  
-publis         main | ??? | ??? | ??? | ??? | ??? | ??? | ??? | ???
-postpublis     main | ??? | ??? | ??? | ??? | ??? | ??? | ??? | ???
+publish        main |  3  |  3  |  3  |  3  |  5  |  7  |  7  |  6 
+postpublish    main |  4  |  4  |  4  |  4  |  6  |  8  |  8  |  7 
 preinstall     main | No  | No  | No  | No  | No  | No  | No  | No  
 install        main | No  | No  | No  | No  | No  | No  | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No  | No  | No  
-prepack        main | ??? | ??? | ??? | ??? | No  |  4  |  4  |  3  
-pack           main | ??? | ??? | ??? | ??? | No  | No! | ??? | ???  
-postpack       main | ??? | ??? | ??? | ??? | No  |  5  |  5  |  4  
-prepare        main | No  | No  | No  |  No |  2  |  2  |  1  |  1  
+prepack        main | No  | No  | No  | No  | No  |  4  |  4  |  3  
+pack           main | No  | No  | No  | No  | No  | No! | No? | No?  
+postpack       main | No  | No  | No  | No  | No  |  5  |  5  |  4  
+prepare        main | No  | No  | No  | No  |  2  |  2  |  1  |  1  
 (is_private)   main |  2  |  2  |  2  |  2  |  4  |  6  |  6  |  5  
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  | No  | No  | No  | No  | No  | No  | No  | No  
@@ -112,9 +112,9 @@ postpublis     main | No  | No  | No  | No  | No  | No | No  | No
 preinstall     main | No  | No  | No  | No  | No  | No | No  | No  
 install        main | No  | No  | No  | No  | No  | No | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No | No  | No  
-prepack        main | No  | No  | No  | No  | No! |  3 |  2  |  2  
-pack           main | No  | No  | No  | No  | No! | No!| ??? | ???  
-postpack       main | No  | No  | No  | No  | No! |  4 |  3  |  3  
+prepack        main | No  | No  | No  | No  | No  |  3 |  2  |  2  
+pack           main | No  | No  | No  | No  | No  | No!| No? | No? 
+postpack       main | No  | No  | No  | No  | No  |  4 |  3  |  3  
 prepare        main | No  | No  | No  | No  |  2  |  2 |  1  |  1  
 (is_private)   main | No  | No  | No  | No  | No  | No | No  | No  
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
