@@ -1,5 +1,27 @@
 ```ShellSession
 vagrant@ndxbn:~/tmp/npm_prepbulish_migration_test$ npm --version
+2.14.3
+vagrant@ndxbn:~/tmp/npm_prepbulish_migration_test$ npm publish --access=public
+
+> @ndxbn/npm_prepbulish_migration_test@0.0.5 prepublish /home/vagrant/tmp/npm_prepbulish_migration_test
+> echo main project prepublish
+
+main project prepublish
++ @ndxbn/npm_prepbulish_migration_test@0.0.5
+
+> @ndxbn/npm_prepbulish_migration_test@0.0.5 publish .
+> echo main project publish
+
+main project publish
+
+> @ndxbn/npm_prepbulish_migration_test@0.0.5 postpublish .
+> echo main project postpublish
+
+main project postpublish
+```
+
+```ShellSession
+vagrant@ndxbn:~/tmp/npm_prepbulish_migration_test$ npm --version
 2.15.11
 vagrant@ndxbn:~/tmp/npm_prepbulish_migration_test$ npm publish --access=public
 
