@@ -1,6 +1,4 @@
-https://qiita.com/ndxbn/items/f0cd2b13a3268254f2aa.md
-
-npm prepublish の現状と今後どう変わっていくかを、表にしてみた。
+npm prepublish の現状と今後どう変わっていくかを、表にしてまとめた
 # 概要
 ## この記事 is なに
 いい加減 Node.js v8 系使いたいので npm 5.x 系を使うことになるのだけれど、「[prepublish がまともな挙動をするように、なだらかに変更かけていくよ](https://github.com/npm/npm/issues/10074)、だから気をつけてね」って言われてるのもわかっていたのだけれど、その内容とか現状をちゃんと把握できていなかったので、調べました。
@@ -52,13 +50,12 @@ https://github.com/npm/npm/issues/10074 で言ってるやつです。
 
 ## `npm install` したときに実行される npm-scirpt の移り変わり
 
-
 npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.0 | step 4 | step 5
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main |  8  |  8  |  8  |  8  |  9  |  7  | No  | No  
 prepublishOnly main | No  | No  | No  | No  | No  | No  | No  | No  
-publis         main | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     main | No  | No  | No  | No  | No  | No  | No  | No  
+publish        main | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    main | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     main |  1  |  1  |  5  |  2  |  3  |  1  |  1  |  1  
 install        main |  6  |  6  |  6  |  6  |  7  |  5  |  5  |  5  
 postinstall    main |  7  |  7  |  7  |  7  |  8  |  6  |  6  |  6  
@@ -70,8 +67,8 @@ prepare        main | No  | No  | No  | No  | 10  |  8  |  7  |  7
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  |  2  |  2  |  1  |  1  |  1  | No  | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No  | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No  | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     sub  |  3  |  3  |  2  |  3  |  4  |  2  |  2  |  2  
 install        sub  |  4  |  4  |  3  |  4  |  5  |  3  |  3  |  3  
 postinstall    sub  |  5  |  5  |  4  |  5  |  6  |  4  |  4  |  4  
@@ -98,8 +95,8 @@ npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main | No  | No  | No  | No  | No  | No  | No  | No  
 prepublishOnly main | No  | No  | No  | No  | No  | No  | No  | No  
-publis         main | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     main | No  | No  | No  | No  | No  | No  | No  | No  
+publish        main | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    main | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     main | No  | No  | No  | No  | No  | No  | No  | No  
 install        main | No  | No  | No  | No  | No  | No  | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No  | No  | No  
@@ -111,8 +108,8 @@ prepare        main | No  | No  | No  | No  | No  | No  | No  | No
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  |  1  |  1  |  1  |  1  |  1  | No  | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No  | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No  | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     sub  |  2  |  2  |  2  |  2  |  3  |  1  |  1  |  1  
 install        sub  |  3  |  3  |  3  |  3  |  4  |  2  |  2  |  2  
 postinstall    sub  |  4  |  4  |  4  |  4  |  5  |  3  |  3  |  3  
@@ -136,21 +133,21 @@ npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main |  1  |  1  |  1  |  1  |  1  |  1  |  3  |  2  
 prepublishOnly main | No  | No  | No  | No  |  3  |  3  |  2  | No (deleted)  
-publis         main | ??? | ??? | ??? | ??? | ??? | ??? | ??? | ???
-postpublis     main | ??? | ??? | ??? | ??? | ??? | ??? | ??? | ???
+publish        main |  3  |  3  |  3  |  3  |  5  |  7  |  7  |  6 
+postpublish    main |  4  |  4  |  4  |  4  |  6  |  8  |  8  |  7 
 preinstall     main | No  | No  | No  | No  | No  | No  | No  | No  
 install        main | No  | No  | No  | No  | No  | No  | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No  | No  | No  
-prepack        main | ??? | ??? | ??? | ??? | No  |  4  |  4  |  3  
-pack           main | ??? | ??? | ??? | ??? | No  | No! | ??? | ???  
-postpack       main | ??? | ??? | ??? | ??? | No  |  5  |  5  |  4  
-prepare        main | No  | No  | No  |  No |  2  |  2  |  1  |  1  
+prepack        main | No  | No  | No  | No  | No  |  4  |  4  |  3  
+pack           main | No  | No  | No  | No  | No  | No! | No? | No?  
+postpack       main | No  | No  | No  | No  | No  |  5  |  5  |  4  
+prepare        main | No  | No  | No  | No  |  2  |  2  |  1  |  1  
 (is_private)   main |  2  |  2  |  2  |  2  |  4  |  6  |  6  |  5  
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  | No  | No  | No  | No  | No  | No  | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No  | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No  | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No  | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No  | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No  | No  | No  
 preinstall     sub  | No  | No  | No  | No  | No  | No  | No  | No  
 install        sub  | No  | No  | No  | No  | No  | No  | No  | No  
 postinstall    sub  | No  | No  | No  | No  | No  | No  | No  | No  
@@ -159,9 +156,7 @@ pack           sub  | No  | No  | No  | No  | No  | No  | No  | No
 postpack       sub  | No  | No  | No  | No  | No  | No  | No  | No  
 prepare        sub  | No  | No  | No  | No  | No  | No  | No  | No  
 
-"???" になっている部分は、実際に publish してないから実行されるはずだけど未確認なところです。
-
-npm 4.2.0 以下では、 `prepack` と `postpack` は実装されていないはずですが、 3.10.10 以下は早い段階で private 判定をしてしまっていたので、一応 ??? にしてあります。
+[`prepack` と `postpack` は実装されたのが v5.0.0 です。](http://blog.npmjs.org/post/161081169345/v500)
 
 見どころは
 
@@ -185,34 +180,32 @@ npm 4.2.0 以下では、 `prepack` と `postpack` は実装されていない�
 
 の2点から、「step 4 では、 `prepublish` が `prepublishOnly` の後に実行される」ように変更されるのではないかと予想しています。
 
-ところで、本当は、dev バージョンあたりを上げたものを 実際に `publish` して動作確認したかったのですが、めんどくさいし、今回知りたいことはそこまでやらなくても知れたので、やってません。やる予定も今のところはありません。
-
 ## `npm pack` したときに実行される npm-scirpt の移り変わり
 
 `npm pack` というコマンドは、もしかしたら馴染みのない人が多いかもしれません。
 [ドキュメントはちゃんとあります](https://docs.npmjs.com/cli/pack)し、[ `prepublish` のほうにも「（registry に アップロードしないという意味の）"dry run" がしたかったら、 `npm pack` を使えばいいんじゃないかな」と下の方に](https://docs.npmjs.com/cli/publish)書いてあります。
 
-そんなコマンドでも、 `prepublish` は実行されています。
+そんなコマンドでも、 `prepublish` は実行されていました。
 
 npm script stage ＼ version | 2.14.3 | 2.15.11 | 3.8.6 | 3.10.10 | 4.2.0 | 5.6.0 | step 4 | step 5
 :-- | --- | --- | --- | --- | --- | --- | --- | ---
 prepublish     main |  1  |  1  |  1  |  1  |  1  |  1 | No  | No  
 prepublishOnly main | No  | No  | No  | No  | No! | No | No  | No  
-publis         main | No  | No  | No  | No  | No  | No | No  | No  
-postpublis     main | No  | No  | No  | No  | No  | No | No  | No  
+publish        main | No  | No  | No  | No  | No  | No | No  | No  
+postpublish    main | No  | No  | No  | No  | No  | No | No  | No  
 preinstall     main | No  | No  | No  | No  | No  | No | No  | No  
 install        main | No  | No  | No  | No  | No  | No | No  | No  
 postinstall    main | No  | No  | No  | No  | No  | No | No  | No  
 prepack        main | No  | No  | No  | No  | No! |  3 |  2  |  2  
-pack           main | No  | No  | No  | No  | No! | No!| ??? | ???  
+pack           main | No  | No  | No  | No  | No! | No!| No? | No?  
 postpack       main | No  | No  | No  | No  | No! |  4 |  3  |  3  
 prepare        main | No  | No  | No  | No  |  2  |  2 |  1  |  1  
 (is_private)   main | No  | No  | No  | No  | No  | No | No  | No  
 ===                 | ==  | ==  | ==  | ==  | ==  | ==  | ==  | ==  
 prepublish     sub  | No  | No  | No  | No  | No  | No | No  | No  
 prepublishOnly sub  | No  | No  | No  | No  | No  | No | No  | No  
-publis         sub  | No  | No  | No  | No  | No  | No | No  | No  
-postpublis     sub  | No  | No  | No  | No  | No  | No | No  | No  
+publish        sub  | No  | No  | No  | No  | No  | No | No  | No  
+postpublish    sub  | No  | No  | No  | No  | No  | No | No  | No  
 preinstall     sub  | No  | No  | No  | No  | No  | No | No  | No  
 install        sub  | No  | No  | No  | No  | No  | No | No  | No  
 postinstall    sub  | No  | No  | No  | No  | No  | No | No  | No  
@@ -220,10 +213,6 @@ prepack        sub  | No  | No  | No  | No  | No  | No | No  | No
 pack           sub  | No  | No  | No  | No  | No  | No | No  | No  
 postpack       sub  | No  | No  | No  | No  | No  | No | No  | No  
 prepare        sub  | No  | No  | No  | No  | No  | No | No  | No  
-
-
-[`prepack` と`postpack` は、 v5.0.0 で実装されたものです。](http://blog.npmjs.org/post/161081169345/v500)
-
 
 見どころとしては、
 
@@ -250,3 +239,5 @@ step 4 が来て `prepublish` が本来の姿になったら 、速やかに `pr
 # おまけ
 
 [prepublishOnly should run on `npm pack` という ISSUE](https://github.com/npm/npm/issues/15363) がありました。私も、最初はこの疑問を持ちましたが、やはり同じように疑問に思う人はいる（？）みたいですね。
+
+`npm publish` は、[実際に publis して確認しました](https://www.npmjs.com/package/@ndxbn/npm_prepbulish_migration_test)。ログは、[GitHub のリポジトリに含めています](https://github.com/ndxbn/npm_prepbulish_migration_test/blob/master/misc/npm-publish.md)。
